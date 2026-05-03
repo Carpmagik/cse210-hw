@@ -2,7 +2,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        JournalApp _app = new JournalApp();
+        JournalManage manage = new JournalManage();
+        JournalApp _app = new JournalApp(manage);
         _app.Run();
     }
 }

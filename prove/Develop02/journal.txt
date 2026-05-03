@@ -1,3 +1,1 @@
-5/2/2026~What did you eat today?~food
-5/2/2026~What was the strongest emotion you felt today?~tired
-5/2/2026~Did you have any regrets?~no
+5/2/2026~Did you have any regrets?~yes
