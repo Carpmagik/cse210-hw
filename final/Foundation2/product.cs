@@ -2,32 +2,32 @@ namespace ProductOrderingSystem
 {
     public class Product
     {
-        private string _name;
-        private string _productId;
-        private double _pricePerUnit;
-        private int _quantity;
+        private string name;
+        private string productId;
+        private double price;
+        private int quantity;
 
-        public Product(string name, string productId, double pricePerUnit, int quantity)
+        public Product(string name, string productId, double price, int quantity)
         {
-            _name = name;
-            _productId = productId;
-            _pricePerUnit = pricePerUnit;
-            _quantity = quantity;
+            this.name = name;
+            this.productId = productId;
+            this.price = price;
+            this.quantity = quantity;
         }
 
         public string GetName()
         {
-            return _name;
+            return name;
         }
 
         public string GetProductId()
         {
-            return _productId;
+            return productId;
         }
 
         public double GetTotalCost()
         {
-            return _pricePerUnit * _quantity;
+            return price * quantity;
         }
     }
 }

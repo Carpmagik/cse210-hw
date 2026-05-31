@@ -4,30 +4,29 @@ namespace ProductOrderingSystem
 {
     public class Order
     {
-        private List<Product> _products;
-        private Customer _customer;
+        private List<Product> products = new List<Product>();
+        private Customer customer;
 
         public Order(Customer customer)
         {
-            _customer = customer;
-            _products = new List<Product>();
+            this.customer = customer;
         }
 
         public void AddProduct(Product product)
         {
-            _products.Add(product);
+            products.Add(product);
         }
 
-        public double CalculateTotalCost()
+        public double CalculateTotal()
         {
             double total = 0;
 
-            foreach (Product product in _products)
+            foreach (Product p in products)
             {
-                total += product.GetTotalCost();
+                total += p.GetTotalCost();
             }
 
-            if (_customer.LivesInUSA())
+            if (customer.LivesInUSA())
             {
                 total += 5;
             }
@@ -41,11 +40,11 @@ namespace ProductOrderingSystem
 
         public string GetPackingLabel()
         {
-            string label = "PACKING LABEL\n";
+            string label = "Packing Label:\n";
 
-            foreach (Product product in _products)
+            foreach (Product p in products)
             {
-                label += $"Product: {product.GetName()} | ID: {product.GetProductId()}\n";
+                label += p.GetName() + " (" + p.GetProductId() + ")\n";
             }
 
             return label;
@@ -53,7 +52,9 @@ namespace ProductOrderingSystem
 
         public string GetShippingLabel()
         {
-            return $"SHIPPING LABEL\n{_customer.GetName()}\n{_customer.GetAddress().GetFullAddress()}";
+            return "Shipping Label:\n" +
+                   customer.GetName() + "\n" +
+                   customer.GetAddress().GetFullAddress();
         }
     }
 }
