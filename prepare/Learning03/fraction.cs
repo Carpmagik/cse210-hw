@@ -5,7 +5,7 @@ public class Fraction
 
     public Fraction(int numerator, int denominator)
     {
-        Fraction(wholeNumber: int)
+
 
 
     }
