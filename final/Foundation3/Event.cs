@@ -25,6 +25,6 @@ class Event
 
     public string GetStandardDetails()
     {
-        return $"Title: {_Eventtitle}\nDescription: {_description}\nDate: {_date}\nTime: {_time}";
+        return $"Title: {_Eventtitle}\nDescription: {_description}\nDate: {_date}\nTime: {_time} \nAddress: {_address}";
     }
 }

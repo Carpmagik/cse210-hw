@@ -42,8 +42,8 @@ class Program
 
 
         Lecture lectureEvent = new Lecture(
-            "THistory Lecture",
-            "A lecture on the latest trends in technology.",
+            "History Lecture",
+            "Lecture on American History.",
             "6/10/2026",
             "3:00 PM",
             "Classroom",
